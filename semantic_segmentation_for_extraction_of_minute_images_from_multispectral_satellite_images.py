@@ -31,16 +31,16 @@ from keras_unet_collection import models, losses
 from tensorflow.keras.metrics import MeanIoU
 
 # import zipfile
-# with zipfile.ZipFile("/home/abhishekr/ship_masks","r") as zip_ref:
-#     zip_ref.extractall("/home/abhishekr/dataset")
-# with zipfile.ZipFile("/home/abhishekr/ship_images.zip","r") as zip_ref:
-#     zip_ref.extractall("/home/abhishekr/dataset")
+# with zipfile.ZipFile("/home/deepak/ship_masks","r") as zip_ref:
+#     zip_ref.extractall("/home/deepak/dataset")
+# with zipfile.ZipFile("/home/deepak/ship_images.zip","r") as zip_ref:
+#     zip_ref.extractall("/home/deepak/dataset")
 
 """### Read Images"""
 
 # Test images/masks path
-X_path = "/home/abhishekr/dataset/images"
-y_path = "/home/abhishekr/dataset/masks"
+X_path = "/home/deepak/dataset/images"
+y_path = "/home/deepak/dataset/masks"
 
 X = []
 y = []
@@ -116,7 +116,7 @@ plt.show()
 
 """### Functions for Training Model & getting mean IoU"""
 
-base_dir = "/home/abhishekr/Methods/M5/"
+base_dir = "/home/deepak/Methods/M5/"
 # os.mkdir(base_dir + "aug_X_trapped")
 # os.mkdir(base_dir + "aug_y_trapped")
 
@@ -422,4 +422,3 @@ mean_iou = getMeanIoU(model3, X_train, y_train)
 print("Mean IoU on training data: ", mean_iou)
 mean_iou = getMeanIoU(model3, X_test, y_test)
 print("Mean IoU on testing data: ", mean_iou)
-
